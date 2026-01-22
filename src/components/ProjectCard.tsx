@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import type { Project } from '@/lib/data';
 
 interface ProjectCardProps {
@@ -22,7 +21,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <Link href={`/projects/${project.slug}`}>
         {/* Image Container */}
-        <div className="relative aspect-[3/4] overflow-hidden mb-5">
+        <div className="relative aspect-[3/4] overflow-hidden mb-4">
           <Image
             src={project.mainImage}
             alt={project.name}
@@ -33,15 +32,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Content */}
         <div>
-          <h3 className="font-serif text-lg text-[var(--text-dark)] font-medium uppercase tracking-wide mb-2">
+          <h3 className="text-[15px] text-[#1a1a1a] font-semibold uppercase tracking-wide mb-2">
             {project.name}
           </h3>
-          <p className="text-[var(--text-gray)] text-sm mb-3 line-clamp-2">
+          <p className="text-[#666666] text-[14px] mb-2 line-clamp-2">
             {project.shortDescription}
           </p>
-          <span className="inline-flex items-center gap-2 text-[var(--accent-gold)] text-sm uppercase tracking-wide group-hover:gap-3 transition-all">
+          <span className="inline-flex items-center text-[#c9a962] text-[13px] hover:underline">
             View Project
-            <ArrowRight size={16} />
           </span>
         </div>
       </Link>

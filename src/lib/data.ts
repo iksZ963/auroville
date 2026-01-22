@@ -28,10 +28,10 @@ export const projects: Project[] = [
       parking: "14 Car Parking Spaces",
       road: "25-foot Front Road"
     },
-    mainImage: "/images/WhatsApp-Image-2025-02-01-at-12.27.48-PM.jpeg",
+    mainImage: "/images/lake-garden-1.jpeg",
     galleryImages: [
-      "/images/WhatsApp-Image-2025-02-01-at-12.27.48-PM.jpeg",
-      "/images/WhatsApp-Image-2025-02-01-at-12.27.48-sad.jpeg"
+      "/images/lake-garden-1.jpeg",
+      "/images/lake-garden-2.jpeg"
     ],
     featured: true
   },
@@ -47,8 +47,8 @@ export const projects: Project[] = [
       parking: "Dedicated Car Parking",
       road: "25-foot Front Road"
     },
-    mainImage: "/images/3D-View.jpg.jpeg",
-    galleryImages: ["/images/3D-View.jpg.jpeg"],
+    mainImage: "/images/l-block-1446.jpeg",
+    galleryImages: ["/images/l-block-1446.jpeg"],
     featured: true
   },
   {
@@ -63,8 +63,8 @@ export const projects: Project[] = [
       parking: "Dedicated Car Parking",
       road: "25-foot Front Road"
     },
-    mainImage: "/images/3D-scaled.jpg.jpeg",
-    galleryImages: ["/images/3D-scaled.jpg.jpeg"],
+    mainImage: "/images/j-block-536.jpeg",
+    galleryImages: ["/images/j-block-536.jpeg"],
     featured: true
   },
   {
@@ -114,8 +114,8 @@ export const projects: Project[] = [
       parking: "Dedicated Car Parking",
       road: "25-foot Front Road"
     },
-    mainImage: "/images/huik.jpeg",
-    galleryImages: ["/images/huik.jpeg"],
+    mainImage: "/images/m-block-1084.jpeg",
+    galleryImages: ["/images/m-block-1084.jpeg"],
     featured: false
   },
   {

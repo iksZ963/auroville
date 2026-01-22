@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Linkedin, Youtube, Twitter } from 'lucide-react';
 import { companyInfo } from '@/lib/data';
 
@@ -19,74 +20,68 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-16">
+    <footer className="bg-[#0a0a0a] py-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Logo and Contact */}
-          <div>
-            <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-serif text-white tracking-wider">
-                AUROVILLE
-              </span>
-            </Link>
-            <div className="space-y-3">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Auroville"
+              width={120}
+              height={40}
+              className="h-[40px] w-auto"
+            />
+          </Link>
+
+          {/* Quick Links */}
+          <div className="flex items-center gap-8">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-white text-[14px] hover:text-[#c9a962] transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                className="text-white hover:text-[#c9a962] transition-colors"
+                aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <social.icon size={18} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-6 border-t border-[#333333]">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-6 text-[13px] text-white">
               <a
                 href={`mailto:${companyInfo.email}`}
-                className="block text-white hover:text-[var(--accent-gold)] transition-colors"
+                className="hover:text-[#c9a962] transition-colors"
               >
                 {companyInfo.email}
               </a>
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="block text-white hover:text-[var(--accent-gold)] transition-colors"
+                className="hover:text-[#c9a962] transition-colors"
               >
                 {companyInfo.phone}
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-white text-lg font-medium mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white hover:text-[var(--accent-gold)] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 className="text-white text-lg font-medium mb-6">Follow Us</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="text-white hover:text-[var(--accent-gold)] transition-colors"
-                  aria-label={social.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-[var(--border-gray)]">
-          <p className="text-center text-[var(--text-gray)] text-sm">
-            &copy; {new Date().getFullYear()} Auroville. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

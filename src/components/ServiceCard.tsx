@@ -22,22 +22,21 @@ export default function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-white p-10 hover:shadow-xl transition-shadow duration-300"
+      className="p-8 md:p-6 lg:p-8"
     >
-      <div className="mb-6">
+      <div className="mb-5">
         <Image
           src={icon}
           alt={title}
-          width={48}
-          height={48}
-          className="text-[var(--accent-gold)]"
-          style={{ filter: 'invert(67%) sepia(54%) saturate(385%) hue-rotate(7deg) brightness(92%) contrast(84%)' }}
+          width={40}
+          height={40}
+          className="w-10 h-10"
         />
       </div>
-      <h3 className="font-serif text-2xl text-[var(--text-dark)] mb-4">
+      <h3 className="font-serif text-xl text-[#1a1a1a] mb-3">
         {title}
       </h3>
-      <p className="text-[var(--text-gray)] leading-7">
+      <p className="text-[#666666] text-[15px] leading-[1.7]">
         {description}
       </p>
     </motion.div>

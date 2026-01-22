@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { companyInfo } from '@/lib/data';
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/WhatsApp-Image-2025-02-01-at-12.14.39-PM-16x9-2-scaled.jpeg"
+          src="/images/hero.jpeg"
           alt="Luxury apartment building"
           fill
           className="object-cover"
@@ -20,7 +19,7 @@ export default function Hero() {
           quality={90}
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
       </div>
 
       {/* Content */}
@@ -29,9 +28,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
+          className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white leading-[1.2] mb-10"
         >
-          {companyInfo.tagline}
+          Beautifully Designed
+          <br />
+          For Everyday Living
         </motion.h1>
 
         <motion.div
@@ -41,13 +42,10 @@ export default function Hero() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-3 px-8 py-4 border border-white text-white text-sm uppercase tracking-wider hover:bg-white hover:text-[var(--text-dark)] transition-all group"
+            className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#333333] text-white text-[13px] tracking-wider hover:bg-[#444444] transition-all rounded-sm"
           >
             <span>Know More</span>
-            <ArrowRight
-              size={18}
-              className="transition-transform group-hover:translate-x-1"
-            />
+            <ArrowRight size={16} />
           </Link>
         </motion.div>
       </div>
