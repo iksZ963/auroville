@@ -40,46 +40,40 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-[#1a1a1a]'
-            : 'bg-[#1a1a1a]/90'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1a1a1a]`}
       >
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-[70px]">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <div className="flex items-center justify-between h-[60px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="Auroville"
-                width={140}
-                height={46}
-                className="h-[46px] w-auto"
+                width={130}
+                height={43}
+                className="h-[43px] w-auto"
                 priority
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-10">
+            <div className="hidden md:flex items-center gap-7">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white text-[14px] tracking-wide hover:text-[var(--accent-gold)] transition-colors"
+                  className="text-white text-[14px] hover:text-[#c9a962] transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
-            </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:flex items-center">
+              {/* CTA Button */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="flex items-center gap-2 px-5 py-2.5 bg-[#c9a962] text-[#1a1a1a] text-[13px] font-medium tracking-wide hover:bg-[#b8983f] transition-all rounded-sm"
+                className="ml-2 px-4 py-2 bg-[#c9a962] text-[#1a1a1a] text-[13px] font-medium hover:bg-[#b8983f] transition-all rounded"
               >
-                <span>Call: {companyInfo.phone}</span>
+                Call: {companyInfo.phone}
               </a>
             </div>
 
@@ -116,7 +110,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl tracking-wider hover:text-[var(--accent-gold)] transition-colors"
+                    className="text-white text-2xl tracking-wider hover:text-[#c9a962] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -129,9 +123,9 @@ export default function Navbar() {
               >
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="flex items-center gap-2 px-6 py-3 bg-[#c9a962] text-[#1a1a1a] text-lg font-medium tracking-wide hover:bg-[#b8983f] transition-all"
+                  className="px-6 py-3 bg-[#c9a962] text-[#1a1a1a] text-lg font-medium hover:bg-[#b8983f] transition-all rounded"
                 >
-                  <span>Call: {companyInfo.phone}</span>
+                  Call: {companyInfo.phone}
                 </a>
               </motion.div>
             </div>
