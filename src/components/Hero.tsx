@@ -14,12 +14,12 @@ export default function Hero() {
           src="/images/hero.jpeg"
           alt="Luxury apartment building"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           quality={90}
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
+        {/* Subtle overlay for text readability */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Content */}
@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white leading-[1.2] mb-10"
+          className="font-serif text-4xl md:text-5xl lg:text-[52px] text-white leading-[1.25] mb-8 italic"
         >
           Beautifully Designed
           <br />
@@ -42,29 +42,13 @@ export default function Hero() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#333333] text-white text-[13px] tracking-wider hover:bg-[#444444] transition-all rounded-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d2d2d] text-white text-[13px] tracking-wide hover:bg-[#3d3d3d] transition-all rounded"
           >
             <span>Know More</span>
-            <ArrowRight size={16} />
+            <ArrowRight size={14} />
           </Link>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-            className="w-1.5 h-1.5 bg-white rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }
