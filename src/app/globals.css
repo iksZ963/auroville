@@ -24,7 +24,7 @@
   --color-text-light-gray: var(--text-light-gray);
   --color-accent-gold: var(--accent-gold);
   --color-border-gray: var(--border-gray);
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Urbanist', -apple-system, sans-serif;
   --font-sans: 'Inter', -apple-system, sans-serif;
 }
 

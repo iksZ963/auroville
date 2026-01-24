@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="font-serif text-5xl md:text-6xl lg:text-[72px] text-white leading-[1.15] mb-12 font-normal"
+          className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white leading-[1.15] mb-10 font-semibold"
         >
           Beautifully Designed
           <br />
@@ -42,7 +42,7 @@ export default function Hero() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#2d2d2d]/90 text-white text-[14px] tracking-wide hover:bg-[#3d3d3d] transition-all rounded-md"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#191919] text-white text-[14px] tracking-wide hover:bg-[#212121] transition-all rounded-[10px]"
           >
             <span>Know More</span>
             <ArrowRight size={16} />
