@@ -44,22 +44,22 @@ export default function Navbar() {
           isScrolled ? 'bg-[#1a1a1a]/95 backdrop-blur-sm' : 'bg-transparent'
         }`}
       >
-        <div className="w-full px-8 md:px-16 lg:px-24">
-          <div className="flex items-center justify-between h-[90px]">
-            {/* Logo - Centered on left portion */}
-            <Link href="/" className="flex items-center">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="flex items-center justify-between h-[80px]">
+            {/* Logo */}
+            <Link href="/" className="flex items-center ml-4 md:ml-8 lg:ml-16">
               <Image
                 src="/images/logo.png"
                 alt="Auroville"
-                width={180}
-                height={60}
-                className="h-[55px] w-auto"
+                width={200}
+                height={65}
+                className="h-[60px] w-auto"
                 priority
               />
             </Link>
 
             {/* Desktop Navigation - Right side */}
-            <div className="hidden md:flex items-center gap-10">
+            <div className="hidden md:flex items-center gap-8 mr-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -70,10 +70,10 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {/* CTA Button - Outlined style with rounded corners */}
+              {/* CTA Button - Outlined style */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="ml-4 px-5 py-2.5 border border-white/70 text-white text-[14px] hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md"
+                className="ml-4 px-5 py-2.5 border border-white/80 text-white text-[14px] hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md"
               >
                 Call: {companyInfo.phone}
               </a>
