@@ -23,7 +23,7 @@ export default function ProjectsGrid({ showAll = false }: ProjectsGridProps) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="font-serif text-3xl md:text-4xl text-[#1a1a1a] mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl text-[#1a1a1a] mb-4 font-semibold">
             Our Best Projects
           </h2>
           <p className="text-[#666666] text-[15px] max-w-xl mx-auto">

@@ -18,7 +18,7 @@ export default function Stats() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-2xl md:text-3xl text-white leading-[1.3] mb-5">
+            <h2 className="font-serif text-2xl md:text-3xl text-white leading-[1.3] mb-5 font-semibold">
               Discover how we can bring your architectural dreams to life.
             </h2>
             <p className="text-[#999999] text-[15px] leading-[1.8] mb-8">

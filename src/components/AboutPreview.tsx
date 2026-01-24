@@ -31,7 +31,7 @@ export default function AboutPreview() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-[32px] text-[#1a1a1a] leading-[1.3] mb-5">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-[32px] text-[#1a1a1a] leading-[1.3] mb-5 font-semibold">
               Architectural more innovative and coherent your concept
             </h2>
             <p className="text-[#666666] text-[15px] leading-[1.8]">
