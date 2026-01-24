@@ -41,39 +41,39 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-[#1a1a1a]' : 'bg-transparent'
+          isScrolled ? 'bg-[#1a1a1a]/95 backdrop-blur-sm' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-5">
-          <div className="flex items-center justify-between h-[70px]">
-            {/* Logo */}
+        <div className="w-full px-8 md:px-16 lg:px-24">
+          <div className="flex items-center justify-between h-[90px]">
+            {/* Logo - Centered on left portion */}
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="Auroville"
-                width={150}
-                height={50}
-                className="h-[50px] w-auto"
+                width={180}
+                height={60}
+                className="h-[55px] w-auto"
                 priority
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Navigation - Right side */}
+            <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white text-[14px] hover:text-[#c9a962] transition-colors"
+                  className="text-white text-[15px] hover:text-[#c9a962] transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
 
-              {/* CTA Button - Outlined style */}
+              {/* CTA Button - Outlined style with rounded corners */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="ml-2 px-5 py-2 border border-white/80 text-white text-[13px] hover:bg-white hover:text-[#1a1a1a] transition-all rounded"
+                className="ml-4 px-5 py-2.5 border border-white/70 text-white text-[14px] hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md"
               >
                 Call: {companyInfo.phone}
               </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
               className="md:hidden text-white p-2"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -99,9 +99,9 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#1a1a1a] md:hidden pt-20"
+            className="fixed inset-0 z-40 bg-[#1a1a1a] md:hidden pt-24"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-8">
+            <div className="flex flex-col items-center justify-center h-full gap-10">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
@@ -125,7 +125,7 @@ export default function Navbar() {
               >
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="px-6 py-3 border border-white text-white text-lg hover:bg-white hover:text-[#1a1a1a] transition-all rounded"
+                  className="px-6 py-3 border border-white text-white text-lg hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md"
                 >
                   Call: {companyInfo.phone}
                 </a>
