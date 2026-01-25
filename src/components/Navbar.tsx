@@ -73,7 +73,7 @@ export default function Navbar() {
               {/* CTA Button - Outlined with gold hover */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="px-5 py-2 border-2 border-white text-white text-[14px] font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all"
+                className="px-6 py-2.5 border border-white/70 text-white text-[14px] font-medium hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-full"
               >
                 Call: {companyInfo.phone}
               </a>
@@ -125,7 +125,7 @@ export default function Navbar() {
               >
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="px-6 py-3 border border-white text-white text-lg font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-[4px]"
+                  className="px-6 py-3 border border-white/70 text-white text-lg font-medium hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-full"
                 >
                   Call: {companyInfo.phone}
                 </a>
