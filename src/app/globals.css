@@ -25,7 +25,7 @@
   --color-accent-gold: var(--accent-gold);
   --color-border-gray: var(--border-gray);
   --font-serif: 'Urbanist', -apple-system, sans-serif;
-  --font-sans: 'Inter', -apple-system, sans-serif;
+  --font-sans: 'Urbanist', -apple-system, sans-serif;
 }
 
 * {

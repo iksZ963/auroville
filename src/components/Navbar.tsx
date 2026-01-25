@@ -41,39 +41,39 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-[#1a1a1a]/95 backdrop-blur-sm' : 'bg-transparent'
+          isScrolled ? 'bg-[#1a1a1a]/90 backdrop-blur-sm' : 'bg-black/20'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
-          <div className="flex items-center justify-between h-[70px]">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-[80px]">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="Auroville"
-                width={120}
-                height={40}
-                className="h-auto w-[120px]"
+                width={140}
+                height={45}
+                className="h-auto w-[140px]"
                 priority
               />
             </Link>
 
             {/* Desktop Navigation - Right side */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white text-[15px] hover:text-[#c9a962] transition-colors font-medium"
+                  className="text-white text-[16px] font-semibold hover:text-[#c9a962] transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
 
-              {/* CTA Button - Outlined style */}
+              {/* CTA Button - Outlined with gold hover */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="ml-2 px-5 py-2.5 border border-white text-white text-[14px] hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md font-medium"
+                className="px-6 py-3 border border-white text-white text-[15px] font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-[4px]"
               >
                 Call: {companyInfo.phone}
               </a>
@@ -112,7 +112,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl tracking-wider hover:text-[#c9a962] transition-colors"
+                    className="text-white text-2xl font-semibold tracking-wider hover:text-[#c9a962] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -125,7 +125,7 @@ export default function Navbar() {
               >
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="px-6 py-3 border border-white text-white text-lg hover:bg-white hover:text-[#1a1a1a] transition-all rounded-md"
+                  className="px-6 py-3 border border-white text-white text-lg font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-[4px]"
                 >
                   Call: {companyInfo.phone}
                 </a>
