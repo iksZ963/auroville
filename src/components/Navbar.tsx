@@ -46,14 +46,14 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-[80px]">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
+            {/* Logo - Full header height */}
+            <Link href="/" className="flex items-center h-full py-2">
               <Image
                 src="/images/logo.png"
                 alt="Auroville"
-                width={140}
-                height={45}
-                className="h-auto w-[140px]"
+                width={180}
+                height={60}
+                className="h-[60px] w-auto"
                 priority
               />
             </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
               {/* CTA Button - Outlined with gold hover */}
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="px-6 py-3 border border-white text-white text-[15px] font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all rounded-[4px]"
+                className="px-5 py-2 border-2 border-white text-white text-[14px] font-semibold hover:bg-[#c9a962] hover:border-[#c9a962] hover:text-[#1a1a1a] transition-all"
               >
                 Call: {companyInfo.phone}
               </a>
